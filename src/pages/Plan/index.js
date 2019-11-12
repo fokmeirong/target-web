@@ -5,7 +5,7 @@ class Plan extends React.Component {
     render() {
         return (
             <div className='plan-page'>
-                <Header title="Plan" left="zuo" right="you"/>
+                <Header title="提醒事项 / 计划"/>
                 plan page
             </div>
         );

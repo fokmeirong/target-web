@@ -1,41 +1,48 @@
 import React from 'react';
+import './header.scss';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+import Nav from './../../components/Navigation'
 
-// export default Header;
-// class Header extends React.Component {
 
-//     render() {
-//         return (
-//             <div className="header">
-//                 <div className="left">
-//                     {this.props.left}
-//                 </div>
-//                 <div className="title">
-//                     {this.props.title}
-//                 </div>
-//                 <div className="right">
-//                     {this.props.right}
-//                 </div>
-//             </div>
-//         );
-//     }
-// }
+class Header extends React.Component {
 
-// export default Header;
+    constructor(props) {
+        super(props);
 
-const Header = (props) => {
-    return (
-        <div className="header">
-            <div className="left">
-                {props.left}
+        this.toggleNav = this.toggleNav.bind(this);
+        this.state = {
+            showNav: false
+        };
+    }
+
+    toggleNav() {
+        
+    }
+
+    render() {
+        return (
+            <div>
+                <header className="header">
+                    <div className="left">
+                        {
+                            this.props.left || <i className="fas fa-bars toggle-nav-btn" onClick={this.toggleNav}></i>
+                        }
+                    </div>
+                    <div className="title">
+                        {this.props.title}
+                    </div>
+                    <div className="right">
+                        {this.props.right}
+                    </div>
+                </header>
+
+                <aside className="nav-slide-list">
+                    
+                </aside>
+
             </div>
-            <div className="title">
-                {props.title}
-            </div>
-            <div className="right">
-                {props.right}
-            </div>
-        </div>
-    );
+        );
+    }
 }
 
 export default Header;
