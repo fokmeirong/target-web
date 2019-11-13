@@ -1,7 +1,7 @@
 import React from 'react';
-import './header.scss';
+import './../../style/header.scss';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
-import Nav from './../../components/Navigation'
+import Navigation from './../../components/Navigation'
 
 
 class Header extends React.Component {
@@ -37,7 +37,7 @@ class Header extends React.Component {
                 </header>
 
                 <aside className="nav-slide-list">
-                    
+                    <Navigation/>
                 </aside>
 
             </div>

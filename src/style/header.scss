@@ -1,0 +1,51 @@
+@import './variables';
+
+header {
+    background: #000000;
+    color: #FFFFFF;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 15px;
+    height: $header-height;
+
+    .toggle-nav-btn {
+        cursor: pointer;
+        width: 15px;
+        margin-right: 10px;
+    }
+
+    .title {
+        flex: 1;
+        text-align: center;
+    }
+
+    .right {
+        width: 15px;
+        margin-left: 10px;
+    }
+}
+
+
+aside.nav-slide-list {
+    position: fixed;
+    width: 100%;
+    height: calc(100vh - #{$header-height});
+    background: $white-color;
+
+    ul.nav-list {
+
+        li {
+            list-style-type: none;
+            list-style: none;
+            margin: 0 15px;
+            border-bottom: $border-color 1px solid;
+
+            a {
+                display: block;
+                text-decoration: none;
+                margin: 15px;
+            }
+        }
+    }
+}

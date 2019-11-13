@@ -1,11 +1,25 @@
 
+@import './variables';
+@import './reset';
 @import './../../node_modules/@fortawesome/fontawesome-free/css/all.min.css';
 
-body {
+* {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-.container {
+body {
+  min-width: $min-width;
+  max-width: $max-width;
+  margin: 0 auto;
+  color: $normal-font-color;
+}
 
+a {
+  color: $normal-font-color;
+}
+
+.page-content {
+  padding: 15px;
 }
