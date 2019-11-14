@@ -28,7 +28,7 @@ header {
 
 
 aside.nav-slide-list {
-    position: fixed;
+    position: absolute;
     width: 100%;
     height: calc(100vh - #{$header-height});
     background: $white-color;
